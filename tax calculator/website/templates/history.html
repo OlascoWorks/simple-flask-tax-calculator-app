@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}My History{% endblock %}
+{% block content %}
+<h1 align="center" style="margin-top: 20px">CALCULATION HISTORY</h1>
+{% for calc in user.calculations %}
+<div class="calc-item">
+    <span style="font: 50px solid">Tax:    {{ calc.tax }}</span>
+    <br>
+    <span style="font: 50px solid; margin-bottom: 10px">Balance:    {{ calc.balance }}</span>
+    <hr>
+    <span style="font: 30px medium grey">{{ calc.date }}</span>
+</div>
+{% endfor %}
+{% endblock %}
